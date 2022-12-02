@@ -35,7 +35,7 @@ switch (config.auth) {
     app.use(logger.initialize());
     app.use(routes);
     app.get('*', serveIndex());
-    app.listen(8081, () => logger.info('main.app_start'));
+    app.listen(8080, () => logger.info('main.app_start'));
     break;
   case 'jwt':
     app.use(session(config.sessionConfig));
